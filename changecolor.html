@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Change Button</title>
+</head>
+<body>
+    <script>
+            function randomColor() {
+                var colorNum = Math.floor(Math.random() * 6);
+                var myColor ;
+                switch(colorNum) {
+                case 0:
+                    // code block
+                    myColor = "red"
+                    break;
+                case 1:
+                    // code block
+                    myColor = "orange"
+                    break;
+                case 2:
+                    // code block
+                    myColor = "yellow"
+                    break;
+                case 3:
+                    // code block
+                    myColor = "green"
+                    break;
+                case 4:
+                    // code block
+                    myColor = "blue"
+                    break;
+                case 5:
+                    // code block
+                    myColor = "purple"
+                    break;
+                default:
+                    // code block
+                    myColor = "black"
+                }
+                return myColor;
+            }
+
+        function changeBackground(color) {
+            document.body.style.background = color;
+            }   
+        
+        const button = document.createElement('button')
+
+        button.innerText = 'Click Me!'
+
+        button.id = 'mainButton'
+
+        button.addEventListener('click', () => {
+          changeBackground(randomColor())
+        })
+  
+        document.body.appendChild(button)
+      </script>
+</body>
+</html>
